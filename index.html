@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#142D3C">
+  <meta name="color-scheme" content="light only">
+  <meta name="supported-color-schemes" content="light">
   <meta name="description" content="Marc Rjeily — Executive, Advisor and Investor. Strategy, Growth and Partnerships.">
   <title>Marc Rjeily</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
+      color-scheme: only light;
       --navy: #142d3c;
       --navy-deep: #0f2532;
       --ivory: #f4eee6;
@@ -24,7 +27,11 @@
 
     * { box-sizing: border-box; }
 
-    html { min-height: 100%; background: var(--navy); }
+    html {
+      min-height: 100%;
+      background-color: #142d3c;
+      color-scheme: only light;
+    }
 
     body {
       min-height: 100svh;
@@ -35,6 +42,7 @@
         var(--navy);
       font-family: "Montserrat", Arial, sans-serif;
       -webkit-font-smoothing: antialiased;
+      forced-color-adjust: none;
     }
 
     .page {
@@ -242,6 +250,36 @@
 
     @media (prefers-reduced-motion: reduce) {
       .action { transition: none; }
+    }
+
+    /* Keep the brand palette unchanged when the device uses dark mode. */
+    @media (prefers-color-scheme: dark) {
+      html,
+      body {
+        color-scheme: only light;
+        background-color: #142d3c !important;
+      }
+
+      body {
+        color: #162f3f !important;
+        background:
+          radial-gradient(circle at 82% 10%, rgba(196, 170, 124, .10), transparent 26rem),
+          #142d3c !important;
+      }
+
+      .card {
+        background:
+          linear-gradient(rgba(244, 238, 230, .96), rgba(244, 238, 230, .96)),
+          repeating-linear-gradient(45deg, rgba(20, 45, 60, .025) 0 1px, transparent 1px 4px) !important;
+      }
+
+      .action {
+        color: #162f3f !important;
+        background-color: rgba(255, 255, 255, .36) !important;
+      }
+
+      .intro { color: #4e5f68 !important; }
+      .action span { color: #68737a !important; }
     }
   </style>
 </head>
