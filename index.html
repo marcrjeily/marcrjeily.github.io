@@ -368,7 +368,8 @@
 
       /* Open Android's Add Contact screen with the main details prefilled. */
       document.getElementById("save-contact-link").href =
-        "intent:#Intent;action=android.intent.action.INSERT;" +
+        "intent://com.android.contacts/contacts#Intent;" +
+        "scheme=content;action=android.intent.action.INSERT;" +
         "type=vnd.android.cursor.dir/contact;" +
         "S.name=Marc%20Rjeily;" +
         "S.phone=%2B971567406730;" +
