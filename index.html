@@ -137,6 +137,8 @@
       text-transform: uppercase;
     }
 
+    .positioning .mobile-group { display: inline; }
+
     .intro {
       margin: 0;
       padding: 22px 24px 0;
@@ -225,6 +227,9 @@
     @media (max-width: 440px) {
       h1 { font-size: clamp(2rem, 10.4vw, 2.8rem); }
       .hero { padding-inline: 16px; }
+      .positioning p { line-height: 1.65; }
+      .positioning .mobile-group { display: block; }
+      .positioning .between { display: none; }
       .actions { grid-template-columns: 1fr; }
       .action { min-height: 60px; }
     }
@@ -267,7 +272,7 @@
     <section class="content" aria-label="Contact details">
       <div class="card">
         <header class="positioning">
-          <p>Strategy · Growth · Partnerships</p>
+          <p aria-label="Strategy, Growth, Transformation and Partnerships"><span class="mobile-group">Strategy · Growth</span><span class="between"> · </span><span class="mobile-group">Transformation · Partnerships</span></p>
         </header>
 
         <p class="intro">Strategy, growth and enterprise leadership executive with 20+ years translating institutional priorities into executable strategies, partnerships, operating models and market-ready ventures across the UAE and GCC.</p>
