@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#142D3C">
+  <meta name="description" content="Marc Rjeily — Executive, Advisor and Investor. Strategy, Growth and Partnerships.">
+  <title>Marc Rjeily</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #142d3c;
+      --navy-deep: #0f2532;
+      --ivory: #f4eee6;
+      --paper: #fbf8f3;
+      --gold: #a18964;
+      --gold-light: #c4aa7c;
+      --ink: #162f3f;
+      --muted: #68737a;
+      --shadow: 0 24px 70px rgba(10, 26, 36, .22);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { min-height: 100%; background: var(--navy); }
+
+    body {
+      min-height: 100svh;
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 82% 10%, rgba(196, 170, 124, .10), transparent 26rem),
+        var(--navy);
+      font-family: "Montserrat", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      min-height: 100svh;
+      display: grid;
+      grid-template-rows: minmax(310px, 47svh) auto;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 44px 24px 76px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 290px;
+      height: 290px;
+      right: -155px;
+      bottom: -170px;
+      border: 1px solid rgba(196, 170, 124, .17);
+      transform: rotate(18deg);
+    }
+
+    .identity { position: relative; z-index: 1; }
+
+    .monogram {
+      width: 92px;
+      height: auto;
+      display: block;
+      margin: 0 auto 24px;
+      opacity: .98;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--ivory);
+      font-family: "Cormorant SC", Georgia, serif;
+      font-size: clamp(2.3rem, 10vw, 4.2rem);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: .20em;
+      text-indent: .20em;
+      white-space: nowrap;
+    }
+
+    .gold-rule {
+      width: 74px;
+      height: 2px;
+      margin: 25px auto 21px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    }
+
+    .role {
+      margin: 0;
+      color: var(--gold-light);
+      font-family: "Cormorant SC", Georgia, serif;
+      font-size: clamp(.92rem, 4vw, 1.15rem);
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      width: min(100%, 720px);
+      margin: -38px auto 0;
+      padding: 0 16px max(24px, env(safe-area-inset-bottom));
+    }
+
+    .card {
+      overflow: hidden;
+      border: 1px solid rgba(161, 137, 100, .36);
+      border-radius: 2px;
+      background:
+        linear-gradient(rgba(244, 238, 230, .96), rgba(244, 238, 230, .96)),
+        repeating-linear-gradient(45deg, rgba(20, 45, 60, .025) 0 1px, transparent 1px 4px);
+      box-shadow: var(--shadow);
+    }
+
+    .positioning {
+      padding: 31px 22px 26px;
+      text-align: center;
+      border-bottom: 1px solid rgba(161, 137, 100, .30);
+    }
+
+    .positioning p {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Cormorant SC", Georgia, serif;
+      font-size: clamp(1rem, 4.5vw, 1.25rem);
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .intro {
+      margin: 0;
+      padding: 22px 24px 0;
+      color: #4e5f68;
+      font-size: .82rem;
+      line-height: 1.75;
+      text-align: center;
+    }
+
+    .actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 11px;
+      padding: 22px;
+    }
+
+    .action {
+      min-height: 62px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 13px 14px;
+      border: 1px solid rgba(20, 45, 60, .15);
+      border-radius: 2px;
+      color: var(--ink);
+      background: rgba(255, 255, 255, .36);
+      text-decoration: none;
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .action:active { transform: scale(.985); }
+
+    .action:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    .action svg {
+      width: 22px;
+      height: 22px;
+      flex: 0 0 auto;
+      color: var(--gold);
+    }
+
+    .action-text { min-width: 0; }
+
+    .action strong {
+      display: block;
+      margin-bottom: 3px;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .10em;
+      text-transform: uppercase;
+    }
+
+    .action span {
+      display: block;
+      overflow: hidden;
+      color: var(--muted);
+      font-size: .69rem;
+      line-height: 1.3;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .footer {
+      padding: 0 22px 23px;
+      color: var(--gold);
+      font-family: "Cormorant SC", Georgia, serif;
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .24em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    @media (hover: hover) {
+      .action:hover {
+        transform: translateY(-2px);
+        border-color: rgba(161, 137, 100, .65);
+        background: rgba(255, 255, 255, .68);
+      }
+    }
+
+    @media (max-width: 440px) {
+      h1 { font-size: clamp(2rem, 10.4vw, 2.8rem); }
+      .hero { padding-inline: 16px; }
+      .actions { grid-template-columns: 1fr; }
+      .action { min-height: 60px; }
+    }
+
+    @media (min-width: 760px) {
+      .page { grid-template-rows: minmax(380px, 55svh) auto; }
+      .content { margin-top: -54px; }
+      .actions { padding: 28px; gap: 14px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .action { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero" aria-labelledby="name">
+      <div class="identity">
+        <img class="monogram" src="mr-monogram.svg" alt="MR monogram">
+        <h1 id="name">Marc Rjeily</h1>
+        <div class="gold-rule" aria-hidden="true"></div>
+        <p class="role">Executive · Advisor · Investor</p>
+      </div>
+    </section>
+
+    <section class="content" aria-label="Contact details">
+      <div class="card">
+        <header class="positioning">
+          <p>Strategy · Growth · Partnerships</p>
+        </header>
+
+        <p class="intro">Strategy, growth and enterprise leadership executive with 20+ years translating institutional priorities into executable strategies, partnerships, operating models and market-ready ventures across the UAE and GCC.</p>
+
+        <div class="actions">
+          <a class="action" href="tel:+971567406730" aria-label="Call Marc Rjeily">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M5.2 3.8 8.1 3l2 4.8-1.8 1.5a14.2 14.2 0 0 0 6.4 6.4l1.5-1.8 4.8 2-.8 2.9a2.3 2.3 0 0 1-2.4 1.7A16.4 16.4 0 0 1 3.5 6.2a2.3 2.3 0 0 1 1.7-2.4Z"/>
+            </svg>
+            <span class="action-text"><strong>Call</strong><span>+971 56 740 6730</span></span>
+          </a>
+
+          <a class="action" href="mailto:marc.rjeily@outlook.com" aria-label="Email Marc Rjeily">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="1.5"/>
+              <path d="m4 7 8 6 8-6"/>
+            </svg>
+            <span class="action-text"><strong>Email</strong><span>marc.rjeily@outlook.com</span></span>
+          </a>
+
+          <a class="action" href="https://www.linkedin.com/in/marcrjeily" target="_blank" rel="noopener noreferrer" aria-label="Open Marc Rjeily on LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="1.5"/>
+              <path d="M7.5 10v7M7.5 7.2v.1M11 17v-7m0 3c.7-2 5.5-2.3 5.5 1.3V17"/>
+            </svg>
+            <span class="action-text"><strong>LinkedIn</strong><span>linkedin.com/in/marcrjeily</span></span>
+          </a>
+
+          <a class="action" href="marc-rjeily.vcf" download aria-label="Save Marc Rjeily to contacts">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M12 3v11m0 0 4-4m-4 4-4-4"/>
+              <path d="M5 14v5h14v-5"/>
+            </svg>
+            <span class="action-text"><strong>Save Contact</strong><span>Add Marc to your phone</span></span>
+          </a>
+        </div>
+
+        <footer class="footer">Build · Scale</footer>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

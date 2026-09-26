@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160" role="img" aria-label="MR monogram">
+  <g fill="none" stroke="#B49768" stroke-width="6" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M22 136V24L70 99L112 24V136"/>
+    <path d="M112 24H143C166 24 179 35 179 54C179 74 165 85 143 85H112"/>
+    <path d="M143 85L181 136"/>
+  </g>
+  <g fill="#B49768">
+    <rect x="14" y="21" width="16" height="6"/>
+    <rect x="14" y="133" width="16" height="6"/>
+    <rect x="104" y="21" width="16" height="6"/>
+    <rect x="104" y="133" width="16" height="6"/>
+    <rect x="174" y="133" width="15" height="6"/>
+  </g>
+</svg>
