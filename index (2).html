@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#352B29">
+  <meta name="color-scheme" content="light only">
+  <meta name="supported-color-schemes" content="light">
+  <meta name="description" content="Marc Rjeily — Executive, Advisor and Investor. Strategy, Growth and Partnerships.">
+  <title>Marc Rjeily</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: only light;
+      --espresso: #352b29;
+      --ivory: #f4eee6;
+      --paper: #fbf8f3;
+      --gold: #a18964;
+      --gold-light: #c4aa7c;
+      --ink: #352b29;
+      --muted: #68737a;
+      --shadow: 0 24px 70px rgba(37, 27, 25, .25);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      min-height: 100%;
+      background-color: #352b29;
+      color-scheme: only light;
+    }
+
+    body {
+      min-height: 100svh;
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 82% 10%, rgba(196, 170, 124, .10), transparent 26rem),
+        linear-gradient(165deg, #2b201f 0%, #352b29 52%, #47342f 100%);
+      font-family: "Montserrat", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      forced-color-adjust: none;
+    }
+
+    .page {
+      min-height: 100svh;
+      display: grid;
+      grid-template-rows: minmax(310px, 47svh) auto;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 44px 24px 76px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 290px;
+      height: 290px;
+      right: -155px;
+      bottom: -170px;
+      border: 1px solid rgba(196, 170, 124, .17);
+      transform: rotate(18deg);
+    }
+
+    .identity { position: relative; z-index: 1; }
+
+    .monogram {
+      width: 92px;
+      height: auto;
+      display: block;
+      margin: 0 auto 24px;
+      opacity: .98;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--ivory);
+      line-height: 1;
+    }
+
+    .name-art {
+      display: block;
+      width: min(75.5vw, 526px);
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .gold-rule {
+      width: 74px;
+      height: 2px;
+      margin: 25px auto 21px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    }
+
+    .role {
+      margin: 0;
+      color: var(--gold-light);
+      font-family: "Cormorant SC", Georgia, serif;
+      font-size: clamp(.92rem, 4vw, 1.15rem);
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      width: min(100%, 720px);
+      margin: -38px auto 0;
+      padding: 0 16px max(24px, env(safe-area-inset-bottom));
+    }
+
+    .card {
+      overflow: hidden;
+      border: 1px solid rgba(161, 137, 100, .36);
+      border-radius: 2px;
+      background:
+        linear-gradient(rgba(244, 238, 230, .96), rgba(244, 238, 230, .96)),
+        repeating-linear-gradient(45deg, rgba(53, 43, 41, .025) 0 1px, transparent 1px 4px);
+      box-shadow: var(--shadow);
+    }
+
+    .positioning {
+      padding: 31px 22px 26px;
+      text-align: center;
+      border-bottom: 1px solid rgba(161, 137, 100, .30);
+    }
+
+    .positioning p {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Cormorant SC", Georgia, serif;
+      font-size: clamp(1rem, 4.5vw, 1.25rem);
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .positioning .mobile-group { display: inline; }
+
+    .intro {
+      margin: 0;
+      padding: 22px 24px 0;
+      color: #4e5f68;
+      font-size: .82rem;
+      line-height: 1.75;
+      text-align: center;
+    }
+
+    .actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 11px;
+      padding: 22px;
+    }
+
+    .action {
+      min-height: 62px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 13px 14px;
+      border: 1px solid rgba(53, 43, 41, .15);
+      border-radius: 2px;
+      color: var(--ink);
+      background: rgba(255, 255, 255, .36);
+      text-decoration: none;
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .action:active { transform: scale(.985); }
+
+    .action:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    .action svg {
+      width: 22px;
+      height: 22px;
+      flex: 0 0 auto;
+      color: var(--gold);
+    }
+
+    .action-text { min-width: 0; }
+
+    .action strong {
+      display: block;
+      margin-bottom: 3px;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .10em;
+      text-transform: uppercase;
+    }
+
+    .action span {
+      display: block;
+      overflow: hidden;
+      color: var(--muted);
+      font-size: .69rem;
+      line-height: 1.3;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .footer {
+      padding: 0 22px 23px;
+      color: var(--gold);
+      font-family: "Cormorant SC", Georgia, serif;
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .24em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    @media (hover: hover) {
+      .action:hover {
+        transform: translateY(-2px);
+        border-color: rgba(161, 137, 100, .65);
+        background: rgba(255, 255, 255, .68);
+      }
+    }
+
+    @media (max-width: 440px) {
+      .hero { padding-inline: 16px; }
+      .positioning p { line-height: 1.65; }
+      .positioning .mobile-group { display: block; }
+      .positioning .between { display: none; }
+      .actions { grid-template-columns: 1fr; }
+      .action { min-height: 60px; }
+    }
+
+    @media (min-width: 760px) {
+      .page { grid-template-rows: minmax(380px, 55svh) auto; }
+      .content { margin-top: -54px; }
+      .actions { padding: 28px; gap: 14px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .action { transition: none; }
+    }
+
+    /* Keep the brand palette unchanged when the device uses dark mode. */
+    @media (prefers-color-scheme: dark) {
+      html,
+      body {
+        color-scheme: only light;
+        background-color: #352b29 !important;
+      }
+
+      body {
+        color: #352b29 !important;
+        background:
+          radial-gradient(circle at 82% 10%, rgba(196, 170, 124, .10), transparent 26rem),
+          linear-gradient(165deg, #2b201f 0%, #352b29 52%, #47342f 100%) !important;
+      }
+
+      .card {
+        background:
+          linear-gradient(rgba(244, 238, 230, .96), rgba(244, 238, 230, .96)),
+          repeating-linear-gradient(45deg, rgba(53, 43, 41, .025) 0 1px, transparent 1px 4px) !important;
+      }
+
+      .action {
+        color: #352b29 !important;
+        background-color: rgba(255, 255, 255, .36) !important;
+      }
+
+      .intro { color: #4e5f68 !important; }
+      .action span { color: #68737a !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero" aria-labelledby="name">
+      <div class="identity">
+        <svg class="monogram" viewBox="0 0 200 160" role="img" aria-label="MR monogram">
+          <g fill="none" stroke="#B49768" stroke-width="6" stroke-linecap="square" stroke-linejoin="miter">
+            <path d="M22 136V24L70 99L112 24V136"/>
+            <path d="M112 24H143C166 24 179 35 179 54C179 74 165 85 143 85H112"/>
+            <path d="M143 85L181 136"/>
+          </g>
+          <g fill="#B49768">
+            <rect x="14" y="21" width="16" height="6"/>
+            <rect x="14" y="133" width="16" height="6"/>
+            <rect x="104" y="21" width="16" height="6"/>
+            <rect x="104" y="133" width="16" height="6"/>
+            <rect x="174" y="133" width="15" height="6"/>
+          </g>
+        </svg>
+        <h1 id="name"><span class="visually-hidden">Marc Rjeily</span><svg class="name-art" viewBox="0 0 138.776 18.692" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" fill="currentColor"><path transform="translate(0.0000 13.8977) scale(0.017993 -0.017993)" d="M50 0V13Q73 20 81.5 43.0Q90 66 90 127V533Q90 590 83.0 621.5Q76 653 62.5 667.0Q49 681 29 687V700H150L411 269L667 700H780V687Q760 681 746.5 667.0Q733 653 726.0 621.5Q719 590 719 533V127Q719 66 727.5 43.0Q736 20 759 13V0H597V13Q620 20 628.5 43.0Q637 66 637 127V619L383 190H364L108 611V167Q108 110 116.0 79.0Q124 48 139.0 33.5Q154 19 176 13V0Z"/><path transform="translate(18.4680 13.8977) scale(0.017993 -0.017993)" d="M-16 0V13Q5 20 25.0 40.5Q45 61 68 118L265 606Q274 630 263 653L254 674L329 708L575 117Q598 61 616.5 40.5Q635 20 651 13V0H496V13Q519 20 515.0 40.5Q511 61 487 117L426 264H144L85 118Q47 23 97 13V0ZM150 279H420L283 608Z"/><path transform="translate(33.5188 13.8977) scale(0.017993 -0.017993)" d="M560 -7Q522 -7 500.0 11.5Q478 30 461.5 65.5Q445 101 423 153Q401 205 386.0 244.0Q371 283 353.5 309.0Q336 335 309.0 348.0Q282 361 237 361H173V127Q173 66 181.5 43.0Q190 20 213 13V0H51V13Q74 20 82.5 43.0Q91 66 91 127V573Q91 635 82.5 657.5Q74 680 51 687V700H248Q350 700 407.0 679.5Q464 659 487.5 624.0Q511 589 511 544Q511 474 461.0 424.5Q411 375 313 364Q359 358 388.0 343.5Q417 329 436.0 304.5Q455 280 470.0 245.0Q485 210 503 164Q527 104 543.5 71.0Q560 38 574.0 24.5Q588 11 605 11Q610 11 613.5 11.0Q617 11 621 12V0Q610 -4 592.5 -5.5Q575 -7 560 -7ZM173 376H257Q343 376 384.5 416.5Q426 457 426 521Q426 566 405.5 603.0Q385 640 339.5 662.5Q294 685 220 685Q209 685 197.0 684.5Q185 684 173 683Z"/><path transform="translate(47.1477 13.8977) scale(0.017993 -0.017993)" d="M429 -10Q314 -10 229.5 31.0Q145 72 98.5 149.5Q52 227 52 336Q52 416 81.0 483.5Q110 551 163.5 601.5Q217 652 290.5 679.5Q364 707 452 707Q495 707 539.5 699.5Q584 692 621.0 681.0Q658 670 677 657L681 538L671 536Q642 604 574.5 646.0Q507 688 418 688Q339 688 275.0 653.0Q211 618 173.5 549.0Q136 480 136 378Q136 308 156.5 242.0Q177 176 218.0 123.5Q259 71 319.0 40.5Q379 10 457 10Q538 10 598.5 52.0Q659 94 688 175L699 174L683 44Q648 25 580.5 7.5Q513 -10 429 -10Z"/><path transform="translate(71.2945 13.8977) scale(0.017993 -0.017993)" d="M560 -7Q522 -7 500.0 11.5Q478 30 461.5 65.5Q445 101 423 153Q401 205 386.0 244.0Q371 283 353.5 309.0Q336 335 309.0 348.0Q282 361 237 361H173V127Q173 66 181.5 43.0Q190 20 213 13V0H51V13Q74 20 82.5 43.0Q91 66 91 127V573Q91 635 82.5 657.5Q74 680 51 687V700H248Q350 700 407.0 679.5Q464 659 487.5 624.0Q511 589 511 544Q511 474 461.0 424.5Q411 375 313 364Q359 358 388.0 343.5Q417 329 436.0 304.5Q455 280 470.0 245.0Q485 210 503 164Q527 104 543.5 71.0Q560 38 574.0 24.5Q588 11 605 11Q610 11 613.5 11.0Q617 11 621 12V0Q610 -4 592.5 -5.5Q575 -7 560 -7ZM173 376H257Q343 376 384.5 416.5Q426 457 426 521Q426 566 405.5 603.0Q385 640 339.5 662.5Q294 685 220 685Q209 685 197.0 684.5Q185 684 173 683Z"/><path transform="translate(85.8235 13.8977) scale(0.017993 -0.017993)" d="M-63 -120Q-82 -120 -92.5 -116.0Q-103 -112 -103 -98Q-103 -82 -88.5 -67.0Q-74 -52 -48 -52Q-27 -52 -5.5 -55.5Q16 -59 52 -67Q64 -59 76.0 -45.5Q88 -32 96.5 -4.0Q105 24 105 74V573Q105 635 96.5 657.5Q88 680 65 687V700H226V687Q203 680 194.5 657.5Q186 635 186 573V196Q186 100 150.5 29.0Q115 -42 58.5 -81.0Q2 -120 -63 -120Z"/><path transform="translate(94.3082 13.8977) scale(0.017993 -0.017993)" d="M51 0V13Q74 20 82.5 43.0Q91 66 91 127V573Q91 635 82.5 657.5Q74 680 51 687V700H516L527 570L516 567Q490 633 443.5 659.0Q397 685 320 685H173V382H301Q358 382 389.5 389.5Q421 397 435.5 412.5Q450 428 456 450H468V299H456Q450 322 435.5 337.0Q421 352 389.5 359.5Q358 367 301 367H173V60Q173 15 218 15H348Q420 15 467.0 40.0Q514 65 541 135L552 133L544 0Z"/><path transform="translate(108.4231 13.8977) scale(0.017993 -0.017993)" d="M51 0V13Q74 20 82.5 43.0Q91 66 91 127V573Q91 635 82.5 657.5Q74 680 51 687V700H213V687Q190 680 181.5 657.5Q173 635 173 573V127Q173 66 181.5 43.0Q190 20 213 13V0Z"/><path transform="translate(116.6922 13.8977) scale(0.017993 -0.017993)" d="M51 0V13Q74 20 82.5 43.0Q91 66 91 127V573Q91 635 82.5 657.5Q74 680 51 687V700H213V687Q190 680 181.5 657.5Q173 635 173 573V61Q173 16 218 16H337Q409 16 447.5 37.5Q486 59 512 115L523 113L516 0Z"/><path transform="translate(128.1805 13.8977) scale(0.017993 -0.017993)" d="M190 0V13Q213 20 221.5 43.0Q230 66 229 127V315L78 589Q49 642 27.0 661.0Q5 680 -11 687V700H147V687Q125 680 132.0 661.0Q139 642 169 589L308 341L448 589Q474 635 474.0 658.5Q474 682 445 687V700H564V687Q544 680 520.0 661.0Q496 642 466 589L313 317V127Q313 66 321.5 43.0Q330 20 353 13V0Z"/></svg></h1>
+        <div class="gold-rule" aria-hidden="true"></div>
+        <p class="role">Executive · Advisor · Investor</p>
+      </div>
+    </section>
+
+    <section class="content" aria-label="Contact details">
+      <div class="card">
+        <header class="positioning">
+          <p aria-label="Strategy, Growth, Transformation and Partnerships"><span class="mobile-group">Strategy · Growth</span><span class="between"> · </span><span class="mobile-group">Transformation · Partnerships</span></p>
+        </header>
+
+        <div class="actions">
+          <a class="action" href="tel:+971567406730" aria-label="Call Marc Rjeily">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M5.2 3.8 8.1 3l2 4.8-1.8 1.5a14.2 14.2 0 0 0 6.4 6.4l1.5-1.8 4.8 2-.8 2.9a2.3 2.3 0 0 1-2.4 1.7A16.4 16.4 0 0 1 3.5 6.2a2.3 2.3 0 0 1 1.7-2.4Z"/>
+            </svg>
+            <span class="action-text"><strong>Call</strong><span>+971 56 740 6730</span></span>
+          </a>
+
+          <a class="action" href="mailto:marc.rjeily@outlook.com" aria-label="Email Marc Rjeily">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="1.5"/>
+              <path d="m4 7 8 6 8-6"/>
+            </svg>
+            <span class="action-text"><strong>Email</strong><span>marc.rjeily@outlook.com</span></span>
+          </a>
+
+          <a class="action" id="linkedin-link" href="https://www.linkedin.com/in/marc-rjeily-078bba155/" rel="noopener noreferrer" aria-label="Open Marc Rjeily in the LinkedIn app">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="1.5"/>
+              <path d="M7.5 10v7M7.5 7.2v.1M11 17v-7m0 3c.7-2 5.5-2.3 5.5 1.3V17"/>
+            </svg>
+            <span class="action-text"><strong>LinkedIn</strong><span>View LinkedIn profile</span></span>
+          </a>
+
+          <a class="action" id="save-contact-link" href="marc-rjeily.vcf" type="text/vcard" aria-label="Add Marc Rjeily to contacts">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M12 3v11m0 0 4-4m-4 4-4-4"/>
+              <path d="M5 14v5h14v-5"/>
+            </svg>
+            <span class="action-text"><strong>Save Contact</strong><span>Add directly to contacts</span></span>
+          </a>
+        </div>
+
+        <footer class="footer">Connect · Build · Scale</footer>
+      </div>
+    </section>
+  </main>
+  <script>
+    (function () {
+      var isAndroid = /Android/i.test(navigator.userAgent);
+      if (!isAndroid) return;
+
+      var profileUrl = "https://www.linkedin.com/in/marc-rjeily-078bba155/";
+      var vcardUrl = "https://marcrjeily.github.io/marc-rjeily.vcf";
+
+      /* Ask Android to open Marc's profile in the installed LinkedIn app. */
+      document.getElementById("linkedin-link").href =
+        "intent://www.linkedin.com/in/marc-rjeily-078bba155/#Intent;" +
+        "scheme=https;package=com.linkedin.android;" +
+        "S.browser_fallback_url=" + encodeURIComponent(profileUrl) + ";end";
+
+      /* Open Android's Add Contact screen with the main details prefilled. */
+      document.getElementById("save-contact-link").href =
+        "intent://com.android.contacts/contacts#Intent;" +
+        "scheme=content;action=android.intent.action.INSERT;" +
+        "type=vnd.android.cursor.dir/contact;" +
+        "S.name=Marc%20Rjeily;" +
+        "S.phone=%2B971567406730;" +
+        "S.email=marc.rjeily%40outlook.com;" +
+        "S.job_title=Executive%20%C2%B7%20Advisor%20%C2%B7%20Investor;" +
+        "S.notes=Strategy%20%C2%B7%20Growth%20%C2%B7%20Transformation%20%C2%B7%20Partnerships;" +
+        "S.browser_fallback_url=" + encodeURIComponent(vcardUrl) + ";end";
+      document.getElementById("save-contact-link").removeAttribute("type");
+    }());
+  </script>
+</body>
+</html>
